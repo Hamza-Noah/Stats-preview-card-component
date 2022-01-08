@@ -68,7 +68,7 @@ ul span {
 
 .img {
   position: relative;
-  width: fit-content;
+  width: 50%;
 }
 
 .img::after {
@@ -86,25 +86,58 @@ ul span {
 .img img {
   border-radius: 0 10px 10px 0;
   height: 100%;
+  width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .parent {
-    width: 375px;
+    margin-block: 100px;
+    width: 80%;
     flex-direction: column-reverse;
   }
 
   .info {
     width: 100%;
+    padding: 40px;
   }
 
-  .info h1 {
+  .info h1,
+  .info ul,
+  .info > p {
     text-align: center;
     width: 100%;
   }
 
+  .info > p {
+  font-size: 1.2rem;
+  padding-right: 0;
+  }
+
+  ul {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    padding-right: 0;
+  }
+
+  ul li {
+    margin-bottom: 30px;
+  }
+  ul span {
+    padding-bottom: 6px;
+    font-size: 2rem;
+  }
+
+  .img {
+    width: 100%;
+    height: 375px;
+  }
+
+  .img::after {
+    border-radius: 10px 10px 0 0;
+  }
+
   .img img {
-    max-width: 100%;
     border-radius: 10px 10px 0 0;
   }
 }
