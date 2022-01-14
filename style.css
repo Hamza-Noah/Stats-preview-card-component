@@ -5,13 +5,13 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #0a0c1b;
-  min-height: 100vh;
-  font-size: 15px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0a0c1b;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
 }
 
 .parent {
@@ -19,15 +19,16 @@ body {
   background-color: #1c1938;
   display: flex;
   max-width: 1100px;
-  margin-inline: 50px;
+  margin-inline: auto;
 }
 
 .info {
-  padding: 50px;
+  padding: 70px;
   width: 50%;
 }
 
 h1 {
+  color: white;
   font-size: 2.2rem;
   letter-spacing: 1px;
 }
@@ -46,10 +47,14 @@ h1 span {
 ul {
   display: flex;
   justify-content: space-between;
-  list-style: none;
   margin-top: 70px;
   padding-right: 50px;
   text-transform: uppercase;
+  list-style: none;
+  font-family: "Lexend Deca", sans-serif;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: hsla(0, 0%, 100%, 0.6);
 }
 
 ul li:not(:last-child) {
@@ -60,29 +65,25 @@ ul span {
   display: block;
   font-size: 1.7rem;
   font-weight: bolder;
-  padding-bottom: 12px;
-}
-
-ul p {
-  font-family: "Lexend Deca", sans-serif;
-  color: hsla(0, 0%, 100%, 0.6);
   letter-spacing: 1px;
-  font-size: 0.8rem;
+  padding-bottom: 12px;
+  color: white;
 }
 
 .img {
   position: relative;
   width: 50%;
 }
+
 .img::after {
   content: "";
   position: absolute;
-  background-color: #a743d6;
-  mix-blend-mode: multiply;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  background-color: #a743d6;
+  mix-blend-mode: multiply;
   border-radius: 0 10px 10px 0;
 }
 
@@ -94,16 +95,18 @@ ul p {
   object-position: left;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+  body {
+    padding: 90px 30px;
+  }
   .parent {
-    margin-block: 100px;
-    width: 80%;
+    width: 100%;
     flex-direction: column-reverse;
   }
 
   .info {
     width: 100%;
-    padding: 40px;
+    padding: 40px 30px 20px;
   }
 
   h1,
@@ -111,6 +114,10 @@ ul p {
   .info > p {
     text-align: center;
     width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
   }
 
   .info > p {
@@ -139,6 +146,7 @@ ul p {
   }
 
   .img::after {
+    bottom: 4px;
     border-radius: 10px 10px 0 0;
   }
 
